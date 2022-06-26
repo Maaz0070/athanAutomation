@@ -1,0 +1,88 @@
+2022-06-25 19:36:15 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned 404
+2022-06-25 19:36:15 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 17 minutes
+2022-06-25 19:53:16 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned 404
+2022-06-25 19:53:16 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 17 minutes
+2022-06-25 20:10:17 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned 404
+2022-06-25 20:10:17 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 17 minutes
+2022-06-25 20:27:18 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned 404
+2022-06-25 20:27:18 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 18 minutes
+2022-06-25 20:41:55 ERROR (Thread-2) [pychromecast.socket_client] [192.168.0.100:8009] Error reading from socket.
+2022-06-25 20:41:55 WARNING (Thread-2) [pychromecast.socket_client] [192.168.0.100:8009] Error communicating with socket, resetting connection
+2022-06-25 20:45:19 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned 404
+2022-06-25 20:45:19 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 15 minutes
+2022-06-25 20:53:53 WARNING (Thread-2) [pychromecast.socket_client] [192.168.0.100:8009] Heartbeat timeout, resetting connection
+2022-06-25 20:54:46 WARNING (Thread-2) [pychromecast.socket_client] [192.168.0.100:8009] Heartbeat timeout, resetting connection
+2022-06-25 21:03:54 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned 404
+2022-06-25 21:03:54 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 20 minutes
+2022-06-25 21:03:56 WARNING (Thread-2) [pychromecast.socket_client] [192.168.0.100:8009] Heartbeat timeout, resetting connection
+2022-06-25 21:13:40 ERROR (MainThread) [homeassistant.components.websocket_api.http.connection.139958782270736] Unable to find token seed! Did https://translate.google.com change?
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/websocket_api/commands.py", line 134, in handle_call_service
+    connection.context(msg),
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1232, in async_call
+    await asyncio.shield(self._execute_service(handler, service_call))
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1255, in _execute_service
+    await handler.func(service_call)
+  File "/usr/src/homeassistant/homeassistant/components/tts/__init__.py", line 159, in async_say_handle
+    p_type, message, cache=cache, language=language, options=options
+  File "/usr/src/homeassistant/homeassistant/components/tts/__init__.py", line 316, in async_get_url
+    engine, key, message, use_cache, language, options
+  File "/usr/src/homeassistant/homeassistant/components/tts/__init__.py", line 327, in async_get_tts_audio
+    extension, data = await provider.async_get_tts_audio(message, language, options)
+  File "/usr/src/homeassistant/homeassistant/components/google_translate/tts.py", line 126, in async_get_tts_audio
+    part_token = await self.hass.async_add_job(token.calculate_token, part)
+  File "/usr/local/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.7/site-packages/gtts_token/gtts_token.py", line 28, in calculate_token
+    seed = self._get_token_key()
+  File "/usr/local/lib/python3.7/site-packages/gtts_token/gtts_token.py", line 59, in _get_token_key
+    "Unable to find token seed! Did https://translate.google.com change?"
+ValueError: Unable to find token seed! Did https://translate.google.com change?
+2022-06-25 21:13:49 ERROR (MainThread) [homeassistant.components.websocket_api.http.connection.139958782270736] Unable to find token seed! Did https://translate.google.com change?
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/websocket_api/commands.py", line 134, in handle_call_service
+    connection.context(msg),
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1232, in async_call
+    await asyncio.shield(self._execute_service(handler, service_call))
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1255, in _execute_service
+    await handler.func(service_call)
+  File "/usr/src/homeassistant/homeassistant/components/tts/__init__.py", line 159, in async_say_handle
+    p_type, message, cache=cache, language=language, options=options
+  File "/usr/src/homeassistant/homeassistant/components/tts/__init__.py", line 316, in async_get_url
+    engine, key, message, use_cache, language, options
+  File "/usr/src/homeassistant/homeassistant/components/tts/__init__.py", line 327, in async_get_tts_audio
+    extension, data = await provider.async_get_tts_audio(message, language, options)
+  File "/usr/src/homeassistant/homeassistant/components/google_translate/tts.py", line 126, in async_get_tts_audio
+    part_token = await self.hass.async_add_job(token.calculate_token, part)
+  File "/usr/local/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.7/site-packages/gtts_token/gtts_token.py", line 28, in calculate_token
+    seed = self._get_token_key()
+  File "/usr/local/lib/python3.7/site-packages/gtts_token/gtts_token.py", line 59, in _get_token_key
+    "Unable to find token seed! Did https://translate.google.com change?"
+ValueError: Unable to find token seed! Did https://translate.google.com change?
+2022-06-25 21:14:20 ERROR (MainThread) [homeassistant.components.websocket_api.http.connection.139958782270736] Unable to find token seed! Did https://translate.google.com change?
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/websocket_api/commands.py", line 134, in handle_call_service
+    connection.context(msg),
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1232, in async_call
+    await asyncio.shield(self._execute_service(handler, service_call))
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1255, in _execute_service
+    await handler.func(service_call)
+  File "/usr/src/homeassistant/homeassistant/components/tts/__init__.py", line 159, in async_say_handle
+    p_type, message, cache=cache, language=language, options=options
+  File "/usr/src/homeassistant/homeassistant/components/tts/__init__.py", line 316, in async_get_url
+    engine, key, message, use_cache, language, options
+  File "/usr/src/homeassistant/homeassistant/components/tts/__init__.py", line 327, in async_get_tts_audio
+    extension, data = await provider.async_get_tts_audio(message, language, options)
+  File "/usr/src/homeassistant/homeassistant/components/google_translate/tts.py", line 126, in async_get_tts_audio
+    part_token = await self.hass.async_add_job(token.calculate_token, part)
+  File "/usr/local/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.7/site-packages/gtts_token/gtts_token.py", line 28, in calculate_token
+    seed = self._get_token_key()
+  File "/usr/local/lib/python3.7/site-packages/gtts_token/gtts_token.py", line 59, in _get_token_key
+    "Unable to find token seed! Did https://translate.google.com change?"
+ValueError: Unable to find token seed! Did https://translate.google.com change?
+2022-06-25 21:23:55 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned 404
+2022-06-25 21:23:55 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 18 minutes

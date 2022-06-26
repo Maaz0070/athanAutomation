@@ -1,0 +1,17 @@
+version: '3'
+services:
+  prayer-time:
+    container_name: prayer-time
+    image: registry.gitlab.com/shariatpurbasi/islamic-prayer-call-assistant:latest
+    volumes:
+      - .:/config
+    ports:
+      - 8123:8123
+
+    environment:      
+      - TZ=America/Los_Angeles #1
+
+    restart: always
+    network_mode: bridge
+
+#1. Locate your time zone from here --> https://www.zeitverschiebung.net/en/

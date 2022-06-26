@@ -1,0 +1,62 @@
+homeassistant:
+  latitude: 37.6681244 #1
+  longitude: -122.064931 #1
+  unit_system: imperial #2
+  time_zone: America/Los_Angeles #3
+
+default_config:
+discovery:
+media_extractor:
+sun:
+updater:
+  
+cast:
+  media_player:
+    - host: 192.168.0.100 #4
+
+sensor:
+  - platform: time_date
+    display_options:
+      - 'time'
+      - 'date'
+      - 'date_time'
+      - 'date_time_iso'
+      - 'time_date'
+      - 'time_utc'
+      - 'beat'
+  - platform: islamic_prayer_times #5
+    calculation_method: isna #5
+    sensors:
+      - fajr
+      - sunrise
+      - dhuhr
+      - asr
+      - maghrib
+      - isha
+      - midnight
+
+
+tts:
+  - platform: google_translate
+
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+
+#1. locate your location from --> https://gps-coordinates.org/
+
+#2. options are --> imperial or metric
+
+#3. locate your time zone from --> https://www.zeitverschiebung.net/en/
+
+#4.
+# Launch the 'Google Home' app on your phone/computer 
+# Select the name of your google home device
+# Select 'Device Settings'
+# Look for 'IP address'
+
+#5. locate here --> https://www.muslimpro.com/en/ 
+# options are --> karachi, isna, mwl, makkah

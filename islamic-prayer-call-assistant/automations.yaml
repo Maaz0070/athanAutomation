@@ -1,0 +1,34 @@
+# Automation for 5 times Azan
+- action:
+  - alias: ''
+    data:
+      entity_id: media_player.living_room_display
+      media_content_id: https://www.islamcan.com/audio/adhan/azan2.mp3
+      media_content_type: audio/mp3
+    service: media_extractor.play_media
+  - data:
+      entity_id: media_player.living_room_display
+      volume_level: '0.9'
+    service: media_player.volume_set
+  alias: Adhan
+  condition: []
+  id: '1517693010922'
+  trigger:
+    - platform: template
+      value_template: '{{ as_timestamp(strptime(states("sensor.time_date"), "%H:%M, %Y-%m-%d")) == as_timestamp(strptime(states("sensor.islamic_prayer_time_fajr"), "%Y-%m-%dT%H:%M:%S")) }}'
+    - platform: template
+      value_template: '{{ as_timestamp(strptime(states("sensor.time_date"), "%H:%M, %Y-%m-%d")) == as_timestamp(strptime(states("sensor.islamic_prayer_time_dhuhr"), "%Y-%m-%dT%H:%M:%S")) }}'
+    - platform: template
+      value_template: '{{ as_timestamp(strptime(states("sensor.time_date"), "%H:%M, %Y-%m-%d")) == as_timestamp(strptime(states("sensor.islamic_prayer_time_asr"), "%Y-%m-%dT%H:%M:%S")) }}'
+    - platform: template
+      value_template: '{{ as_timestamp(strptime(states("sensor.time_date"), "%H:%M, %Y-%m-%d")) == as_timestamp(strptime(states("sensor.islamic_prayer_time_maghrib"), "%Y-%m-%dT%H:%M:%S")) }}'
+    - platform: template
+      value_template: '{{ as_timestamp(strptime(states("sensor.time_date"), "%H:%M, %Y-%m-%d")) == as_timestamp(strptime(states("sensor.islamic_prayer_time_isha"), "%Y-%m-%dT%H:%M:%S")) }}'
+
+### Restart HA to force update Islamic Time Sensors at 1AM ###
+- alias: Restart HA
+  trigger:
+    platform: time
+    at: "01:00:00"
+  action:
+    - service: homeassistant.restart
