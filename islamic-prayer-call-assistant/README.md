@@ -1,9 +1,9 @@
 ![Image](Screen Shot 2.png)
 
  
-## Video:
+## Description:
+A google home automation for islamic prayer calss. 
 
-[![Automate Playing Adhan on Google Home](http://img.youtube.com/vi/E_qlDUX1QNU/0.jpg)](http://www.youtube.com/watch?v=E_qlDUX1QNU "Automate Playing Adhan on Google Home")
 
 ### Download:
 [Project files](https://gitlab.com/shariatpurbasi/islamic-prayer-call-assistant/-/archive/master/islamic-prayer-call-assistant-master.zip)
